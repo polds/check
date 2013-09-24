@@ -27,7 +27,7 @@ check.CreditCard("4111111111111111").CardIs("MasterCard") // Returns false
 To determine the merchant of credit card
 
 ```golang
-check.CreditCard("4111111111111111").Card() // Returns Visa
+check.CreditCard("4111111111111111").Merchant() // Returns Visa
 ```
 
 ### [Email](https://github.com/polds/check#email)
