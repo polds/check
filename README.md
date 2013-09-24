@@ -1,16 +1,16 @@
 # check
 
-Validation Library for Go. [API Documentation](http://godoc.org/github.com/polds/check) on go.pkgdoc.org.
+Validation Library for Go. [API Documentation](http://godoc.org/github.com/polds/check) on go.pkgdoc.org. Inspiration and partial port from [is.js](https://github.com/rthor/isjs)
 
-# Installation
+# [Installation](https://github.com/polds/check#installation)
 
 ```
 go get github.com/polds/check
 ```
 
-# Usage
+## [Usage](https://github.com/polds/check#usage)
 
-# Credit Card
+### [Credit Card](https://github.com/polds/check#credit-card)
 
 To check if a credit card is a valid card
 
@@ -30,7 +30,7 @@ To determine the type of credit card
 check.CreditCard("4111111111111111").Card() // Returns Visa
 ```
 
-# Email
+### [Email](https://github.com/polds/check#email)
 
 To validate an email address
 
