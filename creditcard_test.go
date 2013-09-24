@@ -25,6 +25,12 @@ func TestAny(t *testing.T) {
 		t.Errorf("Any(%v) = false, want true", sixteen)
 	}
 
+	// Check for letters
+	sixteen = "a111222233334444"
+	if CreditCard(sixteen).CardIs("Any") {
+		t.Errorf("Any(%v) = true, want false", sixteen)
+	}
+
 }
 
 func TestMasterCard(t *testing.T) {
@@ -51,6 +57,12 @@ func TestMasterCard(t *testing.T) {
 
 	// Check for all other style card numbers
 	sixteen = "9111222233334444"
+	if CreditCard(sixteen).CardIs("MasterCard") {
+		t.Errorf("Any(%v) = true, want false", sixteen)
+	}
+
+	// Check for letters
+	sixteen = "a111222233334444"
 	if CreditCard(sixteen).CardIs("MasterCard") {
 		t.Errorf("Any(%v) = true, want false", sixteen)
 	}
@@ -83,6 +95,12 @@ func TestVisa(t *testing.T) {
 	if CreditCard(sixteen).CardIs("Visa") {
 		t.Errorf("Any(%v) = true, want false", sixteen)
 	}
+
+	// Check for letters
+	sixteen = "a111222233334444"
+	if CreditCard(sixteen).CardIs("Visa") {
+		t.Errorf("Any(%v) = true, want false", sixteen)
+	}
 }
 
 func TestDiscover(t *testing.T) {
@@ -109,6 +127,12 @@ func TestDiscover(t *testing.T) {
 
 	// Check for all other style card numbers
 	sixteen = "9111222233334444"
+	if CreditCard(sixteen).CardIs("Discover") {
+		t.Errorf("Any(%v) = true, want false", sixteen)
+	}
+
+	// Check for letters
+	sixteen = "a111222233334444"
 	if CreditCard(sixteen).CardIs("Discover") {
 		t.Errorf("Any(%v) = true, want false", sixteen)
 	}
@@ -149,5 +173,11 @@ func TestAmex(t *testing.T) {
 	sixteen = "9111222233334444"
 	if CreditCard(sixteen).CardIs("AmericanExpress") {
 		t.Errorf("Any(%v) = true, want false", sixteen)
+	}
+
+	// Check for letters
+	fifteen = "a11222233334444"
+	if CreditCard(sixteen).CardIs("AmericanExpress") {
+		t.Errorf("Any(%v) = true, want false", fifteen)
 	}
 }
