@@ -26,7 +26,7 @@ func (c CreditCard) CardIs(card string) bool {
 	return c.match(c.patterns()[card], string(c))
 }
 
-func (c CreditCard) Card() string {
+func (c CreditCard) Merchant() string {
 	var out string = "Not a valid credit card"
 	if !c.CardIs("Any") {
 		return out

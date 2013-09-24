@@ -24,7 +24,7 @@ To validate if a card is a specific type of card (Supported cards: American Expr
 check.CreditCard("4111111111111111").CardIs("MasterCard") // Returns false
 ```
 
-To determine the type of credit card
+To determine the merchant of credit card
 
 ```golang
 check.CreditCard("4111111111111111").Card() // Returns Visa
