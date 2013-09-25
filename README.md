@@ -37,3 +37,8 @@ To validate an email address
 ```golang
 check.Email("test@test.com").IsValid() // Returns true
 ```
+
+
+### [Issues](https://github.com/polds/check#issues)
+
+- Email regex fails: `user@[IPv6:2001:db8:1ff::a0b:dbd0]`, `postbox@com`, `admin@mailserver1`. Besides those examples, regex is RFC compliant.
