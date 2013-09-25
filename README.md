@@ -38,6 +38,14 @@ To validate an email address
 check.Email("test@test.com").IsValid() // Returns true
 ```
 
+### [Zip Code](https://github.com/polds/check#zip)
+
+To validate if a provided zip code matches a target country standard
+
+```golang
+check.Zip("83406").OfCountry("us") // Returns true
+```
+
 
 ### [Issues](https://github.com/polds/check#issues)
 
