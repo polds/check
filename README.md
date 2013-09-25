@@ -2,7 +2,7 @@
 
 Validation Library for Go. [API Documentation](http://godoc.org/github.com/polds/check) on go.pkgdoc.org. Inspiration and partial port from [is.js](https://github.com/rthor/isjs)
 
-# [Installation](https://github.com/polds/check#installation)
+## [Installation](https://github.com/polds/check#installation)
 
 ```
 go get github.com/polds/check
