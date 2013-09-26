@@ -1,5 +1,6 @@
 // Package check is a validation library written in Go
 // to validate many real world applications.
+//
 // Examples include: emails, zip codes, phone numbers, etc.
 package check
 
@@ -15,7 +16,7 @@ type Email string
 // This returns a boolean value.
 func (e Email) IsValid() bool {
 
-	// BUG(polds) The following regex has issues
+	// BUG(polds) The email regex has issues
 	// validating the following types of emails (they return false):
 	// user@[IPv6:2001:db8:1ff::a0b:dbd0], postbox@com, and admin@mailserver1 .
 	// Which according to RFC 5322 should be valid addresses.
