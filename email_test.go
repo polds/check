@@ -27,7 +27,7 @@ func TestValids(t *testing.T) {
 		t.Errorf("%v = false, want true", validemail)
 	}
 
-	// Current Regex does not pass
+	// BUG(polds) Current Regex does not pass
 	// validemail = "user@[IPv6:2001:db8:1ff::a0b:dbd0]"
 	// if !Email(validemail).IsValid() {
 	// 	t.Errorf("%v = false, want true", validemail)
@@ -48,13 +48,13 @@ func TestValids(t *testing.T) {
 		t.Errorf("%v = false, want true", validemail)
 	}
 
-	// Current Regex does not pass
+	// BUG(polds) Current Regex does not pass
 	// validemail = "postbox@com"
 	// if !Email(validemail).IsValid() {
 	// 	t.Errorf("%v = false, want true", validemail)
 	// }
 
-	// Current Regex does not pass
+	// BUG(polds) Current Regex does not pass
 	// validemail = "admin@mailserver1"
 	// if !Email(validemail).IsValid() {
 	// 	t.Errorf("%v = false, want true", validemail)
