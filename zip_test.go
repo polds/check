@@ -285,9 +285,43 @@ func TestPortugalZip(t *testing.T) {
 	}
 }
 
+// Romania
+func TestRomaniaZip(t *testing.T) {
+	zip = "827019"
+	if !Zip(zip).OfCountry("ro") {
+		t.Errorf("%v = false, want true", zip)
+	}
+}
+
+// Slovakia
+func TestSlovakiaZip(t *testing.T) {
+	zip = "811 02"
+	if !Zip(zip).OfCountry("sk") {
+		t.Errorf("%v = false, want true", zip)
+	}
+
+	zip = "SK-811 02"
+	if !Zip(zip).OfCountry("sk") {
+		t.Errorf("%v = false, want true", zip)
+	}
+}
+
+// Slovenia
+func TestSloveniaZip(t *testing.T) {
+	zip = "1233"
+	if !Zip(zip).OfCountry("si") {
+		t.Errorf("%v = false, want true", zip)
+	}
+}
+
 // Sweden
 func TestSwedenZip(t *testing.T) {
 	zip = "254 76"
+	if !Zip(zip).OfCountry("se") {
+		t.Errorf("%v = false, want true", zip)
+	}
+
+	zip = "25476"
 	if !Zip(zip).OfCountry("se") {
 		t.Errorf("%v = false, want true", zip)
 	}
@@ -297,6 +331,14 @@ func TestSwedenZip(t *testing.T) {
 func TestSpainZip(t *testing.T) {
 	zip = "33559"
 	if !Zip(zip).OfCountry("es") {
+		t.Errorf("%v = false, want true", zip)
+	}
+}
+
+// Turkey
+func TestTurkeyZip(t *testing.T) {
+	zip = "21500"
+	if !Zip(zip).OfCountry("tr") {
 		t.Errorf("%v = false, want true", zip)
 	}
 }
@@ -312,5 +354,12 @@ func TestUSZip(t *testing.T) {
 	if !Zip(zip).OfCountry("us") {
 		t.Errorf("%v = false, want true", zip)
 	}
+}
 
+// Ukraine
+func TestUkraineZip(t *testing.T) {
+	zip = "27420"
+	if !Zip(zip).OfCountry("ua") {
+		t.Errorf("%v = false, want true", zip)
+	}
 }
