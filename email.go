@@ -10,10 +10,8 @@ import (
 
 type Email string
 
-// IsValid implements the Email type and
-// will validate if the value stored in Email is
+// IsValid will validate if the value stored in Email is
 // a valid RFC compliant email address.
-// This returns a boolean value.
 func (e Email) IsValid() bool {
 
 	// BUG(polds) The email regex has issues

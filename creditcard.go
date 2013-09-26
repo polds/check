@@ -1,7 +1,3 @@
-// Package check is a validation library written in Go
-// to validate many real world applications.
-//
-// Examples include: emails, zip codes, phone numbers, etc.
 package check
 
 import (
@@ -22,9 +18,11 @@ func (c CreditCard) patterns() map[string]string {
 	return patterns
 }
 
-// CardIs function implements type CreditCard.
-// This function will validate if the value of CreditCard
+// CardIs will validate if the value of CreditCard
 // is of the provided type.
+//
+// Valid options:
+// Any, AmericanExpress, Visa, MasterCard
 func (c CreditCard) CardIs(card string) bool {
 	if c.patterns()[card] == "" {
 		return false
@@ -33,13 +31,12 @@ func (c CreditCard) CardIs(card string) bool {
 	return c.match(c.patterns()[card], string(c))
 }
 
-// Merchant function implements CreditCard.
-// It will get the merchant (card type)
+// Merchant will get the merchant (card type)
 // of a provided credit card number.
 //
 // If no card is found "Not a valid credit card" is returned.
-// @todo return string, error. Let user translate error themselves.
 func (c CreditCard) Merchant() string {
+	// @todo return string, error. Let user translate error themselves.
 	var out string = "Not a valid credit card"
 	if !c.CardIs("Any") {
 		return out
