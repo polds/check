@@ -154,7 +154,7 @@ func TestAmex(t *testing.T) {
 	}
 
 	// Check for AMEX style card number (sequence) Format 1
-	fifteen = "3417122223333444"
+	fifteen = "375987654321001"
 	if !CreditCard(fifteen).CardIs("AmericanExpress") {
 		t.Log(len(fifteen))
 		t.Log("Failure format 1")
