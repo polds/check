@@ -314,6 +314,14 @@ func TestSloveniaZip(t *testing.T) {
 	}
 }
 
+// Spain
+func TestSpainZip(t *testing.T) {
+	zip = "33559"
+	if !Zip(zip).OfCountry("es") {
+		t.Errorf("%v = false, want true", zip)
+	}
+}
+
 // Sweden
 func TestSwedenZip(t *testing.T) {
 	zip = "254 76"
@@ -323,14 +331,6 @@ func TestSwedenZip(t *testing.T) {
 
 	zip = "25476"
 	if !Zip(zip).OfCountry("se") {
-		t.Errorf("%v = false, want true", zip)
-	}
-}
-
-// Spain
-func TestSpainZip(t *testing.T) {
-	zip = "33559"
-	if !Zip(zip).OfCountry("es") {
 		t.Errorf("%v = false, want true", zip)
 	}
 }
